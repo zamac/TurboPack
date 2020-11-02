@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>DotNetHelper-HttpClient</id>
+    <version>2019.12.18</version>
+    <title>DotNetHelper-HttpClient</title>
+    <authors>Joseph McNeal Jr</authors>
+    <owners>Joseph McNeal Jr</owners>
+    <projectUrl>https://github.com/TheMofaDe/DotNetHelper-HttpClient</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An easy to use synchronously &amp; asynchronously http client for restful apis and downloading files</description>
+    <summary />
+    <releaseNotes>https://github.com/TheMofaDe/DotNetHelper-HttpClient</releaseNotes>
+    <copyright>Copyright © Joseph McNeal Jr 2017-2019</copyright>
+    <tags>Dotnethelper</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5" />
+      <group targetFramework=".NETFramework4.5.2" />
+      <group targetFramework="Unsupported0.0">
+        <dependency id="System.Net.Http" version="4.3.4" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Net.Http" targetFramework=".NETFramework4.5, .NETFramework4.5.2" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

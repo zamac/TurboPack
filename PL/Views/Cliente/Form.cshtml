@@ -1,0 +1,260 @@
+﻿@model ML.Cliente
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h2><b> @ViewBag.Titulo</b></h2>
+        <hr />
+    </div>
+</div>
+<div>
+    @using (Html.BeginForm("Form", "Cliente", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.IdCliente, new { @class = "control-label col-md-2 hidden" })
+            <div class="col-md-3">
+                @Html.TextBoxFor(model => model.IdCliente, new { @class = "form-control hidden", @readonly = true })
+                @Html.ValidationMessageFor(model => model.IdCliente)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.LabelFor(model => model.Rfc, "RFC", new { @class = "control-label" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.TextBoxFor(model => model.Rfc, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Rfc)
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3 style=" color:tomato;">
+                    @Html.LabelFor(model => model.NumeroEmpleado, "Numero del empleado", new { @class = "control-label" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.TextBoxFor(model => model.NumeroEmpleado, new { @id = "miInput", onkeypress = "return solonumeros(event)", @class = "form-control" })
+                    
+                    <label id="mensaje_error_letra" class="control-label col-md-12 text-danger"> </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.LabelFor(model => model.Nombre,"Nombre", new { @class = "control-label" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.TextBoxFor(model => model.Nombre, new { @id = "Nombre", @onkeypress = "return soloLetras(event)",  @class = "form-control" })
+                    
+                    <label id="mensaje_error_numnero" class="control-label col-md-12 text-danger"> </label>
+                    @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3 style=" color:tomato;">
+                    @Html.LabelFor(model => model.FechaDeControl, "Fecha de control", new { @class = "control-label" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.EditorFor(model => model.FechaDeControl, new { @class = "form-control", @readonly = "true" } )
+                    @Html.ValidationMessageFor(model => model.FechaDeControl, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.LabelFor(model => model.Salario, new { @class = "control-label" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.TextBoxFor(model => model.Nombre, new { @id = "moneda_nac",  onkeypress="return filterFloat(event,this)", @class = "form-control" })
+                    
+                    <label id="mensaje_error_punto" class="control-label col-md-12 text-danger"> </label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-1">
+                    <input type="submit" value="@ViewBag.Accion" class="btn btn-success" />
+                </div>
+                <div class="col-md-1">
+                    @Html.ActionLink("Regresar", "GetAll", "Cliente", htmlAttributes: new { @class = "btn btn-danger" })
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+@section Scripts {
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    @Scripts.Render("~/bundles/jqueryui")
+    @Styles.Render("~/Content/cssjqryUi")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('input[type=datetime]').datepicker({
+                dateFormat: "dd/M/yy",
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "-150:+0"
+            });
+        });
+    </script>
+    <script type="text/javascript" charset="utf8" src="~/Scripts/DataTables/jquery.dataTables.js"></script>
+    <script src ="../../Scripts/jquery-1.10.2.js"  type="text/javascript">
+        </script>
+        <script src ="../../Scripts/jquery-1.10.2.min.js"  type="text/javascript">
+            </script>
+
+            @*//////////////////validacion de solo letras/////////////////*@
+            <script>
+                $(document).ready(function () {
+                    $('mensaje_error_numnero').hide();
+                });
+
+                function soloLetras(e) {
+                    key = e.keyCode || e.which;
+                    tecla = String.fromCharCode(key).toLowerCase();
+                    letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+                    especiales = [8, 37, 39, 46];
+                    $('#mensaje_error_numnero').html("");
+                    $('#mensaje_error_numnero').show();
+                    $("#Nombre").focus();
+                    tecla_especial = false
+                    for (var i in especiales) {
+                        if (key == especiales[i]) {
+
+                            tecla_especial = true;
+                            break;
+
+                        }
+                    }
+
+                    if (letras.indexOf(tecla) == -1 && !tecla_especial) {
+                        $('#mensaje_error_numnero').html("Solo se aceptan letras");
+                        $('#mensaje_error_numnero').show();
+                        $("#Nombre").focus();
+                        return false;
+                    }
+                }
+
+                function limpia() {
+                    var val = document.getElementById("miInput").value;
+                    var tam = val.length;
+                    for (i = 0; i < tam; i++) {
+                        if (!isNaN(val[i]))
+                            document.getElementById("miInput").value = '';
+                    }
+                }
+            </script>
+}
+@*//////////////////validacion de solo numeros/////////////////*@
+<script>
+    function solonumeros(e) {
+
+        var key;
+
+        if (window.event) // IE
+        {
+            key = e.keyCode;
+
+        }
+        else if (e.which) // Netscape/Firefox/Opera
+        {
+            key = e.which;
+        }
+
+        if (key < 48 || key > 57) {
+            $('#mensaje_error_letra').html("Solo se aceptan números");
+            $('#mensaje_error_letra').show();
+            $("#miInput").focus();
+            return false;
+
+        }
+        $('#mensaje_error_letra').html("");
+        $('#mensaje_error_letra').hide();
+        $("#miInput").focus();
+
+        return true;
+    }
+    $('#mensaje_error_letra').html("");
+    $('#mensaje_error_letra').show();
+    $("#miInput").focus();
+
+
+
+     
+</script>
+            @*//////////////////validacion de solo un punt decimal/////////////////*@
+            <script type="text/javascript">
+<!--
+function filterFloat(evt,input){
+    // Backspace = 8, Enter = 13, ‘0′ = 48, ‘9′ = 57, ‘.’ = 46, ‘-’ = 43
+    var key = window.Event ? evt.which : evt.keyCode;
+    var chark = String.fromCharCode(key);
+    var tempValue = input.value+chark;
+    if(key >= 48 && key <= 57){
+        if (filter(tempValue) === false) {
+            $('#mensaje_error_punto').html("Solo se aceptan dos decimales");
+            $('#mensaje_error_punto').show();
+            $("#moneda_nac").focus();
+            return false;
+        } else {
+            $('#mensaje_error_punto').html("Solo se aceptan dos decimales");
+            $('#mensaje_error_punto').hide();
+            return true;
+        }
+    }else{
+          if(key == 8 || key == 13 || key == 0) {
+              return true;
+          }else if(key == 46){
+              if (filter(tempValue) === false) {
+
+                    return false;
+                }else{
+                    return true;
+                }
+          }else{
+              return false;
+          }
+    }
+}
+            @*//////////////////validacion de solo dos decimales/////////////////*@
+function filter(__val__){
+    var preg = /^([0-9]+\.?[0-9]{0,2})$/;
+    if(preg.test(__val__) === true){
+        return true;
+    }else{
+       return false;
+    }
+
+}
+            </script>

@@ -1,0 +1,37 @@
+C:\Users\Miguel\Documents\Visual Studio 2013\Projects\TurboPack\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+C:\Users\ALIEN 16\Documents\TurboPack-20201028T162416Z-001\TurboPack\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+C:\Users\ALIEN 16\Documents\TurboPack-20201028T162416Z-001\TurboPack\BL\bin\Debug\BL.dll
+C:\Users\ALIEN 16\Documents\TurboPack-20201028T162416Z-001\TurboPack\BL\bin\Debug\BL.pdb
+C:\Users\ALIEN 16\Documents\TurboPack-20201028T162416Z-001\TurboPack\BL\bin\Debug\DL.dll
+C:\Users\ALIEN 16\Documents\TurboPack-20201028T162416Z-001\TurboPack\BL\bin\Debug\ML.dll
+C:\Users\ALIEN 16\Documents\TurboPack-20201028T162416Z-001\TurboPack\BL\bin\Debug\DL.pdb
+C:\Users\ALIEN 16\Documents\TurboPack-20201028T162416Z-001\TurboPack\BL\bin\Debug\ML.pdb
+C:\Users\ALIEN 16\Documents\TurboPack-20201028T162416Z-001\TurboPack\BL\obj\Debug\BL.dll
+C:\Users\ALIEN 16\Documents\TurboPack-20201028T162416Z-001\TurboPack\BL\obj\Debug\BL.pdb
+C:\Users\Miguel\Desktop\TurboPack-20201028T162416Z-001\TurboPack\BL\bin\Debug\BL.dll
+C:\Users\Miguel\Desktop\TurboPack-20201028T162416Z-001\TurboPack\BL\bin\Debug\BL.pdb
+C:\Users\Miguel\Desktop\TurboPack-20201028T162416Z-001\TurboPack\BL\bin\Debug\DL.dll
+C:\Users\Miguel\Desktop\TurboPack-20201028T162416Z-001\TurboPack\BL\bin\Debug\ML.dll
+C:\Users\Miguel\Desktop\TurboPack-20201028T162416Z-001\TurboPack\BL\bin\Debug\DL.pdb
+C:\Users\Miguel\Desktop\TurboPack-20201028T162416Z-001\TurboPack\BL\bin\Debug\ML.pdb
+C:\Users\Miguel\Desktop\TurboPack-20201028T162416Z-001\TurboPack\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+C:\Users\Miguel\Desktop\TurboPack-20201028T162416Z-001\TurboPack\BL\obj\Debug\BL.dll
+C:\Users\Miguel\Desktop\TurboPack-20201028T162416Z-001\TurboPack\BL\obj\Debug\BL.pdb
+C:\Users\ALIEN 16\Downloads\TurboPack\TurboPack\BL\bin\Debug\BL.dll
+C:\Users\ALIEN 16\Downloads\TurboPack\TurboPack\BL\bin\Debug\BL.pdb
+C:\Users\ALIEN 16\Downloads\TurboPack\TurboPack\BL\bin\Debug\DL.dll
+C:\Users\ALIEN 16\Downloads\TurboPack\TurboPack\BL\bin\Debug\ML.dll
+C:\Users\ALIEN 16\Downloads\TurboPack\TurboPack\BL\bin\Debug\DL.pdb
+C:\Users\ALIEN 16\Downloads\TurboPack\TurboPack\BL\bin\Debug\ML.pdb
+C:\Users\ALIEN 16\Downloads\TurboPack\TurboPack\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+C:\Users\ALIEN 16\Downloads\TurboPack\TurboPack\BL\obj\Debug\BL.dll
+C:\Users\ALIEN 16\Downloads\TurboPack\TurboPack\BL\obj\Debug\BL.pdb
+C:\Users\Miguel\Downloads\TurboPack\TurboPack\BL\bin\Debug\BL.dll
+C:\Users\Miguel\Downloads\TurboPack\TurboPack\BL\bin\Debug\BL.pdb
+C:\Users\Miguel\Downloads\TurboPack\TurboPack\BL\bin\Debug\DL.dll
+C:\Users\Miguel\Downloads\TurboPack\TurboPack\BL\bin\Debug\ML.dll
+C:\Users\Miguel\Downloads\TurboPack\TurboPack\BL\bin\Debug\DL.pdb
+C:\Users\Miguel\Downloads\TurboPack\TurboPack\BL\bin\Debug\ML.pdb
+C:\Users\Miguel\Downloads\TurboPack\TurboPack\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+C:\Users\Miguel\Downloads\TurboPack\TurboPack\BL\obj\Debug\BL.dll
+C:\Users\Miguel\Downloads\TurboPack\TurboPack\BL\obj\Debug\BL.pdb

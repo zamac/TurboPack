@@ -1,0 +1,53 @@
+﻿@model ML.Cliente
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de errores</h2>
+
+<div class="row" style="padding-top:30px">
+    @*row para mostrar Asignatura*@
+    <div class="col-md-12">
+        <table class="table table-striped table-hover">
+            <tr>
+                <th class="text-center" scope="col">
+                    Numero de registro
+                </th>
+                <th class="text-center" scope="col">
+                    Detalle del error
+                </th>
+            </tr>
+
+            @foreach (ML.Cliente cliente in Model.Errores)
+            {
+                if (cliente.NumeroDeRegistro != 1)
+                {
+                    <tr>
+
+
+                        <td class="text-center">
+                            @cliente.NumeroDeRegistro
+                        </td>
+
+                        <td class="text-center">
+
+                            @cliente.DetalleError
+                        </td>
+
+
+
+                    </tr>
+                }
+            }
+        </table>
+        <div class="form-group">
+            <div class="row">
+
+                <div class="col-md-1">
+                    @Html.ActionLink("Regresar", "GetAll", "Cliente", htmlAttributes: new { @class = "btn btn-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
